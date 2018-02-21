@@ -1,0 +1,15 @@
+
+entity Task {
+	title String,
+	description String
+}
+
+entity Job {
+	jobTitle String,
+	minSalary Long,
+	maxSalary Long
+}
+
+relationship ManyToMany {
+	Job{task(title)} to Task{job}
+}
